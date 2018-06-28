@@ -1,0 +1,25 @@
+#
+# How to create Local server in xampp
+#
+First Step : go 
+C:\xampp\apache\conf\extra\httpd-vhosts.conf 
+Then :
+<VirtualHost *:80>
+ DocumentRoot "C:/xampp/htdocs/Project Folder Name"
+ ServerName blast.local
+ ServerAlias www.blast.local
+<Directory "c:/xampp/htdocs/Project Folder Name">
+ Order allow,deny
+ Allow from all
+</Directory>
+</VirtualHost>
+
+
+Second Step :
+go to :
+C:\Windows\System32\drivers\etc\hosts
+
+#	127.0.0.1       localhost
+#	::1             localhost
+127.0.0.1       www.blast.local
+127.0.0.1       www.blast.local
